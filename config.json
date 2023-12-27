@@ -1,0 +1,25 @@
+{
+  "name": "GHL Profilux to MQTT Bridge",
+  "image": "registry.gitlab.com/cjburchell/profiluxmqtt:1.0.10-1034644330",
+  "version": "1.0.10",
+  "slug": "profilux_mqtt",
+  "description": "Connects to Profilux and allows control using MQTT",
+  "url": "https://github.com/pbkhrv/rtl_433-hass-addons/tree/main/rtl_433_mqtt_autodiscovery-next",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "application",
+  "boot": "auto",
+  "init": false,
+  "options": {
+    "PROFILUX_HOST": "",
+    "MQTT_HOST": "",
+    "MQTT_USER": "",
+    "MQTT_PASSWORD": ""
+  },
+  "schema": {
+    "PROFILUX_HOST": "str?",
+    "MQTT_HOST": "str?",
+    "MQTT_USER": "str?",
+    "MQTT_PASSWORD": "str?"
+  },
+  "services": ["mqtt:want"]
+}
