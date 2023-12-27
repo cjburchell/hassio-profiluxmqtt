@@ -1,19 +1,18 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: GHL Profilux to MQTT Bridge
 version: "1.0.10"
-slug: "profiluxmqtt"
-image: "registry.gitlab.com/cjburchell/profiluxmqtt:1.0.10-1034644330"
-
-
+slug: profiluxmqtt
 description: Connects to Profilux and allows control using MQTT
-url: "https://github.com/cjburchell/hassio-profiluxmqtt/master/profilux-mqtt"
+url: "https://github.com/cjburchell/hassio-profiluxmqtt/master/profiluxmqtt2"
+startup: application
+boot: auto
+init: false
 arch:
   - armhf
   - armv7
   - aarch64
   - amd64
   - i386
-startup: application
-boot: auto
 init: false
 options:
     PROFILUX_HOST: ""
@@ -25,6 +24,4 @@ schema:
     MQTT_HOST: str
     MQTT_USER: str
     MQTT_PASSWORD: str
-services:
-  - 'mqtt:need'
-
+image: "ghcr.io/home-assistant/{arch}-addon-example"
