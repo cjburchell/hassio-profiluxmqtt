@@ -4,7 +4,7 @@
   "version": "1.0.10",
   "slug": "profilux_mqtt",
   "description": "Connects to Profilux and allows control using MQTT",
-  "url": "https://github.com/pbkhrv/rtl_433-hass-addons/tree/main/rtl_433_mqtt_autodiscovery-next",
+  "url": "https://github.com/cjburchell/hassio-profiluxmqtt/edit/master/profilux-mqtt",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "application",
   "boot": "auto",
